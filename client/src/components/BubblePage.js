@@ -6,6 +6,7 @@ import ColorList from "./ColorList";
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getColors = () => {
     axiosWithAuth()
@@ -24,6 +25,7 @@ const BubblePage = () => {
 
   return (
     <>
+      {isLoading && <h2>Loading Color Data...</h2>}
       <ColorList colors={colorList} updateColors={setColorList} />
       <Bubbles colors={colorList} />
     </>
