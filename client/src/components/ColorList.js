@@ -34,7 +34,6 @@ const ColorList = ({ colors, updateColors }) => {
       .delete(`/api/colors/${color.id}`)
       .then(res => {
         updateColors(colors.filter(stateColor => stateColor.id !== res.data));
-        console.log(res);
       })
       .catch(err => {
         console.log(err);
