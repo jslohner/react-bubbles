@@ -27,10 +27,17 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
-- [ ] What steps can you take in your web apps to keep your data secure?
-- [ ] Describe how web servers work.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+	Tokens are used for client side authentication, which you can implement into server requests to verify that information being handled is being used by the correct person. Tokens can be stored in something like local storage, so that after the token has been made, it will be there for the server to check.
 
+- [ ] What steps can you take in your web apps to keep your data secure?
+	You can create private routes for web applications so that data will only be available when authenticated. After a password and username have been verified, you can use a token to create protected routes and send authentication headers.
+
+- [ ] Describe how web servers work.
+	Servers are basically just computers that store data, which is accessible through the internet. Computers can connect to the internet and then they can find specific servers using a url and domain name. After connecting to a server, that server can send and receive data to the computer connected to it.
+
+- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+	The U in CRUD stands for update, which is referring to a PUT request. We can use PUT requests to edit data and then POST it to the server.
+	The D in CRUD stands for delete, referring to a DELETE request. Similar to a PUT request we can send a request to delete some data from the server we are connecting to.
 
 ## Project Set Up
 
